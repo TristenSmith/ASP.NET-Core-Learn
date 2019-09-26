@@ -15,6 +15,15 @@ namespace MvcMovie.Controllers
             return View();
         }
 
+        public IActionResult Welcome(string name, int numTimes = 1)
+        {
+            ViewData["Message"] = "Hello " + name;
+            ViewData["NumTimes"] = numTimes;
+
+            return View();
+        }
+
+        #region Examples
         //
         //GET: /HelloWorld/
         //public string Index()
@@ -40,5 +49,6 @@ namespace MvcMovie.Controllers
         //{
         //    return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
         //}
+        #endregion
     }
 }
